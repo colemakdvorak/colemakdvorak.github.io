@@ -1,0 +1,26 @@
+# Jekyll output and caches
+/_site/
+/.jekyll-cache/
+/.sass-cache/
+/.jekyll-metadata
+
+# Local Bundler configuration and installed dependencies
+/.bundle/
+/vendor/
+
+# Local environment files (keep example configuration trackable)
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# OS metadata, editor backups, and logs
+.DS_Store
+Thumbs.db
+[Dd]esktop.ini
+*:Zone.Identifier
+*:mshield
+*.swp
+*.swo
+*~
+*.log

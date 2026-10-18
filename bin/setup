@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+# A user-local Ruby toolchain is available in the original WSL workspace.
+# Other machines can use Ruby and Bundler from their normal PATH.
+tools="${GITHUB_PAGE_RUBY_HOME:-$HOME/.local/share/github-page-tools}"
+if [[ -x "$tools/bin/ruby" ]]; then
+  export PATH="$tools/bin:$PATH"
+fi
+
+if ! command -v bundle >/dev/null 2>&1; then
+  printf '%s\n' 'Install Ruby 3.3 and Bundler, then run ./bin/setup again.' >&2
+  exit 1
+fi
+
+bundle config set --local path vendor/bundle
+bundle install --jobs 4 --retry 3

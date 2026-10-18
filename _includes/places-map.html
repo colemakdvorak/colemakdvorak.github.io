@@ -1,0 +1,41 @@
+{% assign map_language = page.lang | default: site.lang %}
+{% assign map_words = site.data.locales[map_language].map %}
+<section class="places-section" aria-labelledby="places-heading"
+         data-places-map data-language="{{ map_language }}"
+         data-world-url="{{ '/assets/maps/countries-50m.json' | relative_url }}"
+         data-places-url="{{ '/assets/places.json' | relative_url }}"
+         data-labels="{{ map_words | jsonify | escape }}">
+  <h2 id="places-heading">{{ map_words.title }}</h2>
+  <div class="places-map-ui" data-map-ui hidden>
+    <p class="places-hint">{{ map_words.hint }}</p>
+    <div id="places-map" class="places-map" data-map-container role="region" aria-label="{{ map_words.label }}" aria-describedby="places-map-note"></div>
+    <div class="journey-player" role="group" aria-label="{{ map_words.playback }}">
+      <div class="journey-player-controls">
+        <button class="map-step-button" type="button" data-player-previous aria-label="{{ map_words.previous }}" title="{{ map_words.previous }}"><span aria-hidden="true">←</span></button>
+        <button class="map-play-button" type="button" data-player-play><span data-player-icon aria-hidden="true">▶</span> <span data-player-play-label>{{ map_words.play }}</span></button>
+        <button class="map-step-button" type="button" data-player-next aria-label="{{ map_words.next }}" title="{{ map_words.next }}"><span aria-hidden="true">→</span></button>
+        <output class="journey-player-count" for="journey-slider" data-player-count aria-live="polite">{{ map_words.overview }}</output>
+      </div>
+      <label class="map-sr-only" for="journey-slider">{{ map_words.slider }}</label>
+      <input id="journey-slider" class="journey-slider" data-player-slider type="range" min="0" max="{{ site.data.places.size }}" step="1" value="0" aria-controls="places-map">
+      <div class="journey-step-card" data-player-card hidden></div>
+    </div>
+    <p id="places-map-note" class="places-map-note">{{ map_words.note }}</p>
+  </div>
+  <p class="places-status" role="status" data-map-status hidden></p>
+  <details class="journey-details" open>
+    <summary>{{ map_words.timeline }} <span class="journey-count">{{ site.data.places.size }} {{ map_words.stops }}</span></summary>
+    <ol class="journey-list">
+      {% for stop in site.data.places %}
+        {% assign stop_number = forloop.index %}
+        <li id="journey-{{ stop.id | escape }}" data-stop-number="{{ stop_number }}">
+          <span class="journey-number" aria-hidden="true">{{ stop_number }}</span>
+          {% include journey-card.html stop=stop %}
+          <div class="journey-actions">
+            <button type="button" class="journey-show" data-map-stop="{{ stop_number }}" data-map-place="{{ stop.map_id }}" hidden>{{ map_words.show }}</button>
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </details>
+</section>

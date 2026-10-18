@@ -1,0 +1,37 @@
+- id: languages
+  label: {en: Languages, ko: 언어}
+  tools:
+    - {name: Lean4, paid: true}
+    - {name: C++, paid: true}
+    - {name: Scala, paid: true}
+    - {name: Matlab, paid: true}
+    - {name: Python, paid: true}
+    - {name: JavaScript (ES5), paid: true}
+    - {name: GoLang, paid: true}
+    - {name: Scheme, paid: false}
+    - {name: OCaml, paid: false}
+    - {name: Java, paid: false}
+    - {name: Swift, paid: false}
+    - {name: Julia, paid: false}
+    - {name: Fortran 77, paid: false}
+
+- id: frameworks
+  label: {en: Frameworks, ko: 프레임워크}
+  tools:
+    - {name: MapReduce, paid: true}
+    - {name: Spark, paid: true}
+    - {name: AKKA, paid: true}
+    - {name: TensorFlow, paid: true}
+    - {name: PyTorch, paid: true}
+    - {name: JAX, paid: true}
+
+- id: cloud
+  label: {en: Cloud platforms, ko: 클라우드 플랫폼}
+  tools:
+    - {name: AWS, paid: true}
+    - {name: GCP, paid: true}
+
+- id: os
+  label: {en: OS, ko: OS}
+  tools:
+    - {name: Ubuntu, paid: true}

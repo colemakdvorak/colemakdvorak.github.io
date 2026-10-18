@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% assign language = page.lang | default: site.lang %}
+{% assign t = site.data.locales[language] %}
+{% assign language_posts = site.posts | where: 'lang', language %}
+<article class="writing-page">
+  <header class="page-header">
+    <p class="eyebrow">{{ t.writing_eyebrow | escape }}</p>
+    <h1>{{ page.title | escape }}</h1>
+    <div class="page-intro">{{ content }}</div>
+  </header>
+
+  {% if language_posts.size > 0 %}
+    <h2 class="archive-heading">{{ t.all_posts }}</h2>
+    {% include post-list.html posts=language_posts %}
+  {% else %}
+    <div class="empty-state">
+      <p class="empty-state-title">{{ t.no_posts }}</p>
+      <p>{{ t.first_post }}</p>
+    </div>
+  {% endif %}
+
+  <p class="feed-link"><a href="{{ t.feed_url | relative_url }}">{{ t.subscribe }} <span aria-hidden="true">↗</span></a></p>
+</article>

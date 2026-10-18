@@ -1,0 +1,89 @@
+- id: gpu-verification
+  kind:
+    en: NeurIPS 2026 VERICODEGEN
+    ko: NeurIPS 2026 VERICODEGEN
+  title:
+    en: Verifying LLM-generated GPU kernels
+    ko: LLM 생성 GPU 커널 검증
+  summary:
+    en: I built the Lean verification side of a framework that checks LLM-generated GPU kernels against their PyTorch specifications, including floating-point behavior. My work covered deterministic CUDA-to-Lean translation and the semantic-equivalence verification pipeline.
+    ko: LLM이 생성한 GPU 커널을 PyTorch 명세와 비교하고 부동소수점 동작까지 검증하는 프레임워크에서 Lean 검증 부분을 구현했습니다. CUDA를 Lean으로 결정론적으로 변환하는 과정과 의미적 동등성 검증 파이프라인을 담당했습니다.
+  links:
+    - source: gpu_paper
+      label:
+        en: Read paper
+        ko: 논문 보기
+
+- id: liftigniter
+  kind:
+    en: Production ML · LiftIgniter (YC W14)
+    ko: 프로덕션 ML · LiftIgniter (YC W14)
+  title:
+    en: Real-time recommendations at scale
+    ko: 대규모 실시간 추천 시스템
+  summary:
+    en: Worked with the team who invented YouTube’s recommendation algorithm. As an ML engineer at LiftIgniter, I built a real-time recommendation system and algorithm serving 100M daily active users, working with clients including Uniqlo, Twitch, and The Telegraph.
+    ko: YouTube의 추천 알고리즘을 개발한 팀과 함께 일했습니다. LiftIgniter의 ML 엔지니어로서 일간 활성 사용자 1억 명을 대상으로 하는 실시간 추천 시스템과 알고리즘을 구현했습니다. Uniqlo, Twitch, The Telegraph 등의 고객사와 함께 일했습니다.
+  links:
+    - source: liftigniter_profile
+      label:
+        en: Team photo · HuffPost
+        ko: 팀 사진 · HuffPost
+    - source: google_awards
+      label:
+        en: Google Cloud awards
+        ko: Google Cloud 수상 기록
+    - source: liftigniter_pitch
+      label:
+        en: Watch the 2016 finals pitch
+        ko: 2016년 결선 발표 보기
+  note:
+    en: "I am the Asian guy with glasses. Just in case you couldn't figure."
+    ko: "안경 쓴 아시아인 남자가 저입니다. 혹시 못 알아보셨을까 봐요."
+
+- id: tensorflow-pert
+  kind:
+    en: Open source · TensorFlow Probability
+    ko: 오픈소스 · TensorFlow Probability
+  title:
+    en: Statistical testing for PERT
+    ko: PERT 분포의 통계적 검증
+  summary:
+    en: The focus of my contribution was a small statistical-testing suite accompanying the modified PERT distribution. It prompted a discussion within Google’s TensorFlow Probability team around the Kolmogorov–Smirnov test and the Glivenko–Cantelli theorem. I believe it also affected future testing practices.
+    ko: 수정 PERT 분포와 함께 작성한 작은 통계 검증 테스트 모음이 제 기여의 핵심입니다. 이 작업은 Kolmogorov–Smirnov 검정과 Glivenko–Cantelli 정리를 둘러싼 Google TensorFlow Probability 팀의 논의로 이어졌습니다. 이후의 테스트 방식에도 영향을 주었다고 생각합니다.
+  links:
+    - source: tfp_integration
+      label:
+        en: Integrated change
+        ko: 반영된 커밋
+
+- id: gesture-player
+  kind:
+    en: Prototype · Android & wearables
+    ko: 프로토타입 · Android와 웨어러블
+  title:
+    en: Gesture-controlled music player
+    ko: 제스처로 조작하는 음악 플레이어
+  summary:
+    en: During my time at KAIST, I built an Android music-player prototype connecting wrist sensors to a Google Nexus One over Bluetooth. Gestures controlled play/pause, track navigation, and volume. This was five years before the Apple Watch launched.
+    ko: KAIST에 머무는 동안 손목 센서를 Google Nexus One에 블루투스로 연결하는 Android 음악 플레이어 프로토타입을 구현했습니다. 제스처로 재생·일시정지, 곡 이동, 음량을 조절했습니다. Apple Watch가 출시되기 5년 전의 작업입니다.
+  attribution:
+    en: My contribution was the application prototype used in E-Gesture. I am not an author of the E-Gesture research paper. The later IEEE SECON 2012 Best Demo Award was awarded to the E-Gesture demo.
+    ko: 제 기여는 E-Gesture에 사용된 애플리케이션 프로토타입 구현입니다. E-Gesture 연구 논문의 저자는 아닙니다. 이후 IEEE SECON 2012 Best Demo Award를 받은 대상은 E-Gesture 데모입니다.
+  credits:
+    en: "The IEEE SECON demo listing credits Taiwoo Park, Jinwon Lee, Inseok Hwang, Chungkuk Yoo, Lama Nachman, and Junehwa Song."
+    ko: "IEEE SECON 데모 목록에 기재된 연구진은 Taiwoo Park, Jinwon Lee, Inseok Hwang, Chungkuk Yoo, Lama Nachman, Junehwa Song입니다."
+  image: /assets/images/gesture-player.jpg
+  image_link: gesture_demo
+  image_label:
+    en: Watch the original gesture-controlled music-player demo on YouTube
+    ko: YouTube에서 제스처 음악 플레이어의 원본 데모 보기
+  links:
+    - source: gesture_demo
+      label:
+        en: Watch prototype demo
+        ko: 프로토타입 데모 보기
+    - source: secon_award
+      label:
+        en: IEEE demo credits & award
+        ko: IEEE 데모 연구진과 수상 기록

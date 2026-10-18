@@ -1,0 +1,52 @@
+{%- assign tag_post = include.post -%}
+{%- assign tag_ui_lang = page.lang | default: site.lang -%}
+{%- assign tag_words = site.data.locales[tag_ui_lang].post_language -%}
+{%- assign tag_original_lang = tag_post.original_lang -%}
+{%- if tag_original_lang and tag_original_lang != '' -%}
+  {%- assign tag_current_lang = tag_post.lang | default: site.lang -%}
+  {%- assign tag_versions = nil -%}
+  {%- assign tag_original_post = nil -%}
+  {%- if tag_post.translation_key and tag_post.translation_key != '' -%}
+    {%- assign tag_versions = site.posts | where: 'translation_key', tag_post.translation_key | where: 'original_lang', tag_original_lang -%}
+    {%- assign tag_original_post = tag_versions | where: 'lang', tag_original_lang | first -%}
+  {%- endif -%}
+  {%- assign tag_original_name = tag_words.names[tag_original_lang] | default: tag_original_lang -%}
+  {%- capture tag_original_label -%}{{ tag_words.original | escape }} · {{ tag_original_name | escape }}{%- endcapture -%}
+  <ul class="post-language-tags" aria-label="{{ tag_words.label | escape }}" role="list">
+    <li class="post-language-tag post-language-tag--original">
+      {%- if tag_original_post and tag_original_post.url != tag_post.url -%}
+        <a href="{{ tag_original_post.url | relative_url }}" hreflang="{{ tag_original_lang | escape }}">{{ tag_original_label }}</a>
+      {%- else -%}
+        <span>{{ tag_original_label }}</span>
+      {%- endif -%}
+    </li>
+    {%- for tag_lang in site.languages -%}
+      {%- if tag_lang != tag_original_lang -%}
+        {%- assign tag_translation = nil -%}
+        {%- if tag_lang == tag_current_lang -%}
+          {%- assign tag_translation = tag_post -%}
+        {%- elsif tag_versions -%}
+          {%- assign tag_translation = tag_versions | where: 'lang', tag_lang | first -%}
+        {%- endif -%}
+        {%- if tag_translation -%}
+          {%- assign tag_method = tag_translation.translation_method | downcase -%}
+          {%- assign tag_kind = 'translation' -%}
+          {%- assign tag_status = tag_words.translation -%}
+          {%- if tag_method == 'llm' -%}
+            {%- assign tag_kind = 'llm' -%}
+            {%- assign tag_status = tag_words.llm_translation -%}
+          {%- endif -%}
+          {%- assign tag_language_name = tag_words.names[tag_lang] | default: tag_lang -%}
+          {%- capture tag_translation_label -%}{{ tag_status | escape }} · {{ tag_language_name | escape }}{%- endcapture -%}
+          <li class="post-language-tag post-language-tag--{{ tag_kind }}">
+            {%- if tag_translation.url != tag_post.url -%}
+              <a href="{{ tag_translation.url | relative_url }}" hreflang="{{ tag_lang | escape }}">{{ tag_translation_label }}</a>
+            {%- else -%}
+              <span>{{ tag_translation_label }}</span>
+            {%- endif -%}
+          </li>
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+{%- endif -%}

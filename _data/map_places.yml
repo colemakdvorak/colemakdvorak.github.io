@@ -1,0 +1,60 @@
+# Representative places. Sequencing is shown on route arrows, not on these pins.
+# Offsets are small screen-space callouts to keep London and Denmark legible.
+- id: us-east
+  name: {en: "US · East Coast", ko: "미국 동부"}
+  label: {en: Providence, ko: 프로비던스}
+  note:
+    en: Providence, Rhode Island—birthplace and Brown University.
+    ko: 태어난 곳이자 브라운 대학교에 다닌 로드아일랜드주 프로비던스.
+  lat: 41.8240
+  lng: -71.4128
+  pin_offset: [0, 0]
+  label_side: top
+  label_offset: [0, -15]
+
+- id: denmark
+  name: {en: Denmark, ko: 덴마크}
+  note:
+    en: School years in Roskilde, Kongens Lyngby, and Hellerup.
+    ko: 로스킬레, 콩엔스 륑뷔, 헬레루프에서 보낸 학창 시절.
+  lat: 55.73
+  lng: 12.50
+  pin_offset: [18, -12]
+  label_side: top
+  label_offset: [0, -10]
+
+- id: korea
+  name: {en: South Korea, ko: 한국}
+  label: {en: Seoul, ko: 서울}
+  note:
+    en: School, research, and work across Korea. Now building my startup in Seoul.
+    ko: 학교, 연구, 일을 거쳐 지금은 서울에서 창업 중.
+  lat: 37.5665
+  lng: 126.9780
+  pin_offset: [0, 0]
+  label_side: bottom
+  label_offset: [0, 18]
+
+- id: us-west
+  name: {en: "US · West Coast", ko: "미국 서부"}
+  label: {en: SF, ko: SF}
+  note:
+    en: San Francisco—ML engineer at LiftIgniter (YC W14).
+    ko: 샌프란시스코에서 LiftIgniter(YC W14)의 ML 엔지니어로 근무.
+  lat: 37.7749
+  lng: -122.4194
+  pin_offset: [0, 0]
+  label_side: bottom
+  label_offset: [0, 18]
+
+- id: uk
+  name: {en: United Kingdom, ko: 영국}
+  label: {en: UK, ko: 영국}
+  note:
+    en: Imperial College London and Logos Research.
+    ko: 임페리얼 칼리지 런던과 Logos Research.
+  lat: 51.5074
+  lng: -0.1278
+  pin_offset: [-18, 44]
+  label_side: right
+  label_offset: [14, -3]

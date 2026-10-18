@@ -1,0 +1,27 @@
+{% assign stack_language = page.lang | default: site.lang %}
+{% assign stack_words = site.data.locales[stack_language].stack %}
+<table class="stack-table">
+  <caption>{{ stack_words.legend | escape }}</caption>
+  <thead>
+    <tr>
+      <th scope="col">{{ stack_words.category | escape }}</th>
+      <th scope="col">{{ stack_words.tools | escape }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for category in site.data.tech_stack %}
+      <tr data-stack-category="{{ category.id | escape }}">
+        <th scope="row">{{ category.label[stack_language] | escape }}</th>
+        <td>
+          <ul class="stack-items" role="list">
+            {% for tool in category.tools %}
+              <li class="stack-item{% if tool.paid %} stack-paid{% endif %}">
+                <span class="stack-name">{{ tool.name | escape }}</span><span class="stack-item-status"> ({% if tool.paid %}{{ stack_words.paid | escape }}{% else %}{{ stack_words.hobby | escape }}{% endif %})</span>
+              </li>
+            {% endfor %}
+          </ul>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>

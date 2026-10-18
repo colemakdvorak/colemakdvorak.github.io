@@ -1,0 +1,20 @@
+{% assign language = page.lang | default: site.lang %}
+{% assign t = site.data.locales[language] %}
+<footer class="site-footer">
+  <div class="wrapper footer-inner">
+    <p class="footer-name">{{ site.title | escape }}</p>
+    <nav class="footer-links" aria-label="{{ t.elsewhere }}">
+      {% if site.email %}
+        <a href="mailto:{{ site.email | escape }}">{{ t.email }}</a>
+      {% endif %}
+      {% if site.github_username %}
+        <a href="https://github.com/{{ site.github_username | escape }}">GitHub</a>
+      {% endif %}
+      {% if site.linkedin_url %}
+        <a href="{{ site.linkedin_url | escape }}">LinkedIn</a>
+      {% endif %}
+      <a href="{{ t.feed_url | relative_url }}">RSS</a>
+    </nav>
+    <p class="site-credit">{{ t.credit_html }}</p>
+  </div>
+</footer>

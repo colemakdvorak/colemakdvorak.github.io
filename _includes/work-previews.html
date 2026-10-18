@@ -1,0 +1,30 @@
+{% assign work_language = page.lang | default: site.lang %}
+<div class="work-previews">
+  {% for project in site.data.work %}
+    <article class="work-preview" id="{{ project.id }}" aria-labelledby="{{ project.id }}-title">
+      <p class="work-kind">{{ project.kind[work_language] | escape }}</p>
+      <h3 id="{{ project.id }}-title">{{ project.title[work_language] | escape }}</h3>
+      <p>{{ project.summary[work_language] | escape }}</p>
+      {% if project.image %}
+        <a class="work-video-preview" href="{{ site.data.links[project.image_link] | escape }}" aria-label="{{ project.image_label[work_language] | escape }}">
+          <img src="{{ project.image | relative_url }}" width="480" height="360" loading="lazy" alt="">
+          <span class="video-play" aria-hidden="true">▶</span>
+          <span class="video-caption">{{ project.image_label[work_language] | escape }}</span>
+        </a>
+      {% endif %}
+      {% if project.attribution %}<p class="work-attribution">{{ project.attribution[work_language] | escape }}</p>{% endif %}
+      <ul class="work-links">
+        {% for link in project.links %}
+          <li><a href="{{ site.data.links[link.source] | escape }}">{{ link.label[work_language] | escape }} <span aria-hidden="true">↗</span></a></li>
+        {% endfor %}
+      </ul>
+      {% if project.credits %}
+        <details class="work-credits">
+          <summary>{% if work_language == 'ko' %}연구진 표기{% else %}Research/demo credits{% endif %}</summary>
+          <p>{{ project.credits[work_language] | escape }}</p>
+        </details>
+      {% endif %}
+      {% if project.note %}<p class="work-note">{{ project.note[work_language] | escape }}</p>{% endif %}
+    </article>
+  {% endfor %}
+</div>

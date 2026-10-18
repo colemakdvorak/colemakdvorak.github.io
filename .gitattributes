@@ -1,0 +1,6 @@
+# Markdown uses trailing spaces for explicit line breaks.
+*.md whitespace=-blank-at-eol
+
+# These unmodified Leaflet distribution files use CRLF line endings.
+assets/lib/leaflet/LICENSE whitespace=cr-at-eol
+assets/lib/leaflet/leaflet.css whitespace=cr-at-eol

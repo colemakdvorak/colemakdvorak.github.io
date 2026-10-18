@@ -1,0 +1,37 @@
+{% assign education_language = page.lang | default: site.lang %}
+<div class="education-cards">
+  {% for school in site.data.education %}
+    <article class="education-card" id="education-{{ school.id }}" aria-labelledby="education-{{ school.id }}-title">
+      <header class="education-card-heading">
+        <h3 id="education-{{ school.id }}-title">{{ school.institution[education_language] | escape }}</h3>
+        <p class="education-period">{{ school.period | escape }}</p>
+      </header>
+      <div class="education-programmes">
+        {% for programme in school.programmes %}
+          <p>{{ programme[education_language] | escape }}</p>
+        {% endfor %}
+      </div>
+      <dl class="education-details">
+        {% for detail in school.details %}
+          <div>
+            <dt>{{ detail.label[education_language] | escape }}</dt>
+            <dd>
+              {%- if detail.people -%}
+                {%- for person in detail.people -%}
+                  {%- unless forloop.first -%}
+                    {%- if education_language == 'en' and forloop.last -%}{{ ' and ' }}{%- else -%}{{ ', ' }}{%- endif -%}
+                  {%- endunless -%}
+                  <a href="{{ person.url | escape }}">{{ person.name | escape }}</a>
+                {%- endfor -%}
+              {%- else -%}
+                {{ detail.value[education_language] | escape }}
+              {%- endif -%}
+              {% if detail.confidential %} <span class="confidential-note">{% if education_language == 'ko' %}NDA / 기밀{% else %}NDA / Confidential{% endif %}</span>{% endif %}
+            </dd>
+          </div>
+        {% endfor %}
+      </dl>
+      {% if school.note %}<div class="education-note">{{ school.note[education_language] | markdownify }}</div>{% endif %}
+    </article>
+  {% endfor %}
+</div>

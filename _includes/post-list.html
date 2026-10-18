@@ -1,0 +1,16 @@
+<ul class="writing-list">
+  {% for post in include.posts %}
+    <li>
+      <time class="writing-date" datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: t.date_format }}
+      </time>
+      <div class="writing-entry">
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+        {% include post-language-tags.html post=post %}
+        {% if post.description and post.description != '' %}
+          <p>{{ post.description | escape }}</p>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>

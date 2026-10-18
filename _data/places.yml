@@ -1,0 +1,227 @@
+# Array order sets the timeline numbers. map_id connects each chapter to one
+# of the country/coast pins in map_places.yml. Detailed locations are retained
+# here as geographic context; the overview uses map_places.yml coordinates.
+# Card format: location-only title, chapter context, country/period, then a note.
+
+- id: providence-birth
+  map_id: us-east
+  title:
+    en: Providence, Rhode Island
+    ko: 로드아일랜드주 프로비던스
+  context: {en: Birth, ko: 출생}
+  country:
+    en: United States
+    ko: 미국
+  note:
+    en: Born in Providence, Rhode Island.
+    ko: 미국 로드아일랜드주 프로비던스에서 태어났습니다.
+  locations:
+    - name:
+        en: Providence
+        ko: 프로비던스
+      lat: 41.8240
+      lng: -71.4128
+
+- id: denmark-school
+  map_id: denmark
+  title:
+    en: Denmark
+    ko: 덴마크
+  context: {en: British school, ko: 영국계 학교}
+  country:
+    en: Denmark
+    ko: 덴마크
+  note:
+    en: Attended a British school through grade 7 while living in Roskilde, Kongens Lyngby, and Hellerup.
+    ko: 로스킬레, 콩엔스 륑뷔, 헬레루프에서 지내며 영국계 학교에 7학년까지 다녔습니다.
+  locations:
+    - name:
+        en: Roskilde
+        ko: 로스킬레
+      lat: 55.6415
+      lng: 12.0803
+    - name:
+        en: Kongens Lyngby
+        ko: 콩엔스 륑뷔
+      lat: 55.7704
+      lng: 12.5038
+    - name:
+        en: Hellerup
+        ko: 헬레루프
+      lat: 55.7314
+      lng: 12.5771
+
+- id: daegu-middle-school
+  map_id: korea
+  title:
+    en: Daegu
+    ko: 대구
+  context: {en: Middle school, ko: 중학교}
+  country:
+    en: South Korea
+    ko: 대한민국
+  note:
+    en: Attended middle school here for two years.
+    ko: 이곳에서 중학교를 2년간 다녔습니다.
+  locations:
+    - name:
+        en: Daegu
+        ko: 대구
+      lat: 35.8714
+      lng: 128.6014
+
+- id: daejeon-school
+  map_id: korea
+  title:
+    en: Daejeon
+    ko: 대전
+  context: {en: High school, ko: 고등학교}
+  country:
+    en: South Korea
+    ko: 대한민국
+  note:
+    en: Graduated from an American high school.
+    ko: 미국계 고등학교를 졸업했습니다.
+  locations:
+    - name:
+        en: Daejeon
+        ko: 대전
+      lat: 36.3504
+      lng: 127.3845
+
+- id: providence-brown
+  map_id: us-east
+  period: "2011–2015"
+  title:
+    en: Providence, Rhode Island
+    ko: 로드아일랜드주 프로비던스
+  context: {en: Brown University, ko: 브라운 대학교}
+  country:
+    en: United States
+    ko: 미국
+  note:
+    en: Returned to Providence to attend Brown University.
+    ko: 브라운 대학교에 다니기 위해 프로비던스로 돌아왔습니다.
+  locations:
+    - name:
+        en: Providence
+        ko: 프로비던스
+      lat: 41.8240
+      lng: -71.4128
+
+- id: san-francisco
+  map_id: us-west
+  title:
+    en: San Francisco
+    ko: 샌프란시스코
+  context: {en: "LiftIgniter (YC W14)", ko: "LiftIgniter (YC W14)"}
+  country:
+    en: United States
+    ko: 미국
+  note:
+    en: Worked as an ML engineer at LiftIgniter (YC W14).
+    ko: LiftIgniter(YC W14)에서 머신러닝 엔지니어로 일했습니다.
+  locations:
+    - name:
+        en: San Francisco
+        ko: 샌프란시스코
+      lat: 37.7749
+      lng: -122.4194
+
+- id: gwacheon
+  map_id: korea
+  title:
+    en: Gwacheon
+    ko: 과천
+  context: {en: Return to Korea, ko: 한국으로 돌아옴}
+  country:
+    en: South Korea
+    ko: 대한민국
+  period: "2020"
+  note:
+    en: Returned during COVID-19. Korea University PhD programme (2021–2022). Dropped out!
+    ko: 코로나19 시기에 한국으로 돌아왔습니다. 고려대학교 박사과정(2021–2022). 중퇴!
+  locations:
+    - name:
+        en: Gwacheon
+        ko: 과천
+      lat: 37.4292
+      lng: 126.9876
+
+- id: mapo-animation
+  map_id: korea
+  title:
+    en: Mapo-gu, Seoul
+    ko: 서울 마포구
+  context: {en: Maro Studio, ko: Maro Studio}
+  country:
+    en: South Korea
+    ko: 대한민국
+  note:
+    en: Worked as a marketer at Maro Studio, an animation studio.
+    ko: 애니메이션 스튜디오 Maro Studio에서 마케터로 일했습니다.
+  locations:
+    - name:
+        en: Mapo-gu
+        ko: 마포구
+      lat: 37.5663
+      lng: 126.9016
+
+- id: seocho-cnai
+  map_id: korea
+  title:
+    en: Seocho-gu, Seoul
+    ko: 서울 서초구
+  context: {en: CNAI, ko: CNAI}
+  country:
+    en: South Korea
+    ko: 대한민국
+  note:
+    en: Interesting things that cannot be written in text happened.
+    ko: 글로는 남길 수 없는 흥미로운 일들이 있었습니다.
+  locations:
+    - name:
+        en: Seocho-gu
+        ko: 서초구
+      lat: 37.4837
+      lng: 127.0324
+
+- id: london-imperial
+  map_id: uk
+  period: "2025–2026"
+  title:
+    en: London
+    ko: 런던
+  context: {en: Imperial College London, ko: 임페리얼 칼리지 런던}
+  country:
+    en: United Kingdom
+    ko: 영국
+  note:
+    en: Studied for a master’s degree at Imperial College London while conducting research for Logos Research.
+    ko: 임페리얼 칼리지 런던의 석사과정에 다니며 Logos Research의 연구를 진행했습니다.
+  locations:
+    - name:
+        en: London
+        ko: 런던
+      lat: 51.5074
+      lng: -0.1278
+
+- id: seoul-founder
+  map_id: korea
+  title:
+    en: Seoul
+    ko: 서울
+  context: {en: Building my startup, ko: 창업}
+  country:
+    en: South Korea
+    ko: 대한민국
+  current: true
+  note:
+    en: Returned to Seoul to build my own startup.
+    ko: 제 스타트업을 만들기 위해 서울로 돌아왔습니다.
+  locations:
+    - name:
+        en: Seoul
+        ko: 서울
+      lat: 37.5665
+      lng: 126.9780

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+{% assign language = page.lang | default: site.lang %}
+{% assign t = site.data.locales[language] %}
+{% assign language_posts = site.posts | where: 'lang', language %}
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ language }}">
+  <title>{{ site.title | xml_escape }} · {{ t.label }}</title>
+  <subtitle>{{ t.feed_description | xml_escape }}</subtitle>
+  <link href="{{ page.url | absolute_url | xml_escape }}" rel="self" type="application/atom+xml" />
+  <link href="{{ t.home_url | absolute_url | xml_escape }}" rel="alternate" type="text/html" hreflang="{{ language }}" />
+  <id>{{ page.url | absolute_url | xml_escape }}</id>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <author><name>{{ site.author | default: site.title | xml_escape }}</name></author>
+  {% for post in language_posts limit: 20 %}
+    <entry>
+      <title>{{ post.title | xml_escape }}</title>
+      <link href="{{ post.url | absolute_url | xml_escape }}" rel="alternate" type="text/html" hreflang="{{ language }}" />
+      <id>{{ post.url | absolute_url | xml_escape }}</id>
+      <published>{{ post.date | date_to_xmlschema }}</published>
+      <updated>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</updated>
+      {% if post.author %}<author><name>{{ post.author | xml_escape }}</name></author>{% endif %}
+      <summary type="html">{{ post.description | default: post.excerpt | strip_html | xml_escape }}</summary>
+      <content type="html" xml:base="{{ post.url | absolute_url | xml_escape }}">{{ post.content | xml_escape }}</content>
+    </entry>
+  {% endfor %}
+</feed>

@@ -1,0 +1,35 @@
+{%- assign current_language = page.lang | default: site.lang -%}
+{%- assign default_language = site.default_language | default: 'en' -%}
+{%- assign language_pages = site.pages | concat: site.posts -%}
+{%- for language_code in site.languages -%}
+  {%- assign target_locale = site.data.locales[language_code] -%}
+  {%- assign translated_page = nil -%}
+  {%- if page.translation_key and page.translation_key != '' -%}
+    {%- assign translated_page = language_pages | where: 'translation_key', page.translation_key | where: 'lang', language_code | first -%}
+  {%- endif -%}
+  {%- assign has_translation = false -%}
+  {%- if language_code == current_language -%}
+    {%- assign language_url = page.url -%}
+    {%- assign has_translation = true -%}
+  {%- elsif translated_page -%}
+    {%- assign language_url = translated_page.url -%}
+    {%- assign has_translation = true -%}
+  {%- elsif page.layout == 'post' -%}
+    {%- assign language_url = target_locale.writing_url -%}
+  {%- else -%}
+    {%- assign language_url = target_locale.home_url -%}
+  {%- endif -%}
+
+  {%- if include.mode == 'metadata' -%}
+    {%- if has_translation -%}
+      <link rel="alternate" hreflang="{{ language_code }}" href="{{ language_url | absolute_url }}">
+      {%- if language_code == default_language -%}
+        <link rel="alternate" hreflang="x-default" href="{{ language_url | absolute_url }}">
+      {%- endif -%}
+    {%- endif -%}
+  {%- else -%}
+    <a class="language-link{% if language_code == current_language %} is-current{% endif %}"
+       href="{{ language_url | relative_url }}" lang="{{ language_code }}" hreflang="{{ language_code }}"
+       data-language="{{ language_code }}"{% if language_code == current_language %} aria-current="page"{% endif %}{% unless has_translation %} title="{{ site.data.locales[current_language].missing_translation | escape }}"{% endunless %}>{{ target_locale.switcher_label | default: target_locale.label | escape }}</a>
+  {%- endif -%}
+{%- endfor -%}

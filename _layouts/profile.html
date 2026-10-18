@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+{% assign language = page.lang | default: site.lang %}
+{% assign t = site.data.locales[language] %}
+{% assign language_posts = site.posts | where: 'lang', language %}
+<article class="profile">
+  {{ content }}
+</article>
+
+{% if language_posts.size > 0 %}
+  <section class="recent-writing" aria-labelledby="recent-writing-heading">
+    <div class="section-heading">
+      <h2 id="recent-writing-heading">{{ t.recent_writing }}</h2>
+      <a class="quiet-link" href="{{ t.writing_url | relative_url }}">{{ t.all_writing }} <span aria-hidden="true">↗</span></a>
+    </div>
+    {% assign recent_posts = language_posts | slice: 0, 3 %}
+    {% include post-list.html posts=recent_posts %}
+  </section>
+{% endif %}

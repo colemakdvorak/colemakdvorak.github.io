@@ -1,0 +1,10 @@
+{% assign photo_language = page.lang | default: site.lang %}
+<div class="profile-photos">
+  {% for photo in site.data.profile_photos %}
+    {% assign photo_text = photo[photo_language] %}
+    <figure class="profile-photo profile-photo--{{ photo.id | escape }}">
+      <img src="{{ photo.image | relative_url }}" alt="{{ photo_text.alt | escape }}" width="{{ photo.width }}" height="{{ photo.height }}" decoding="async">
+      <figcaption>{{ photo_text.caption | escape }}</figcaption>
+    </figure>
+  {% endfor %}
+</div>

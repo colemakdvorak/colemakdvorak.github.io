@@ -1,0 +1,160 @@
+en:
+  label: English
+  home_url: /
+  writing_url: /writing/
+  feed_url: /feed.xml
+  feed_description: "Eugene Lee — founder building fun AI agents. Background, interests, and occasional writing."
+  date_format: "%b %-d, %Y"
+  navigation_label: Main navigation
+  language_label: Language
+  navigation:
+    - key: home
+      label: Home
+      url: /
+    - key: background
+      label: Background
+      url: /background/
+    - key: writing
+      label: Writing
+      url: /writing/
+    - key: interests
+      label: Interests
+      url: /interests/
+  cv: CV
+  skip_to_content: Skip to content
+  content_label: Content
+  table_label: Table
+  code_label: Code sample
+  recent_writing: Recent writing
+  all_writing: All writing
+  writing_eyebrow: Notes & essays
+  all_posts: All posts
+  no_posts: No posts yet.
+  first_post: The first one will appear here.
+  subscribe: Subscribe via RSS
+  elsewhere: Elsewhere
+  email: Email
+  missing_translation: "Translation not available; browse this language’s writing."
+  credit_html: 'Built with <a href="https://jekyllrb.com/">Jekyll</a> &amp; <a href="https://github.com/jekyll/minima">Minima</a>.'
+  post_language:
+    label: Article language versions
+    original: Original
+    translation: Translation
+    llm_translation: LLM translation
+    names:
+      en: English
+      ko: Korean
+  stack:
+    category: Category
+    tools: Stack
+    legend: "Green: used for paid work · Plain: hobby projects"
+    paid: Used for paid work
+    hobby: Hobby project
+  map:
+    title: Places along the way
+    label: Interactive map of my journey
+    hint: Drag the slider or press Play to follow the journey.
+    play: Play
+    pause: Pause
+    replay: Replay
+    previous: Previous stop
+    next: Next stop
+    slider: Journey chapter
+    playback: Journey playback
+    overview: Overview
+    timeline: The journey, in order
+    stops: stops
+    stop: Stop
+    now: Now
+    started: Started
+    country: Place
+    show: On the map
+    zoom_in: Zoom in
+    zoom_out: Zoom out
+    expand: Select to expand
+    close: Close
+    loading: Loading the map…
+    unavailable: The map is unavailable. You can read the full journey below.
+    empty: Places will appear here when added.
+    note: One move at a time. The timeline below keeps every chapter.
+
+ko:
+  label: 한국어
+  switcher_label: 한국어 (LLM)
+  home_url: /ko/
+  writing_url: /ko/writing/
+  feed_url: /ko/feed.xml
+  feed_description: "재미있는 AI 에이전트를 만드는 창업가 Eugene Lee의 지나온 길, 관심사, 그리고 가끔 쓰는 글."
+  date_format: "%Y년 %-m월 %-d일"
+  navigation_label: 주요 메뉴
+  language_label: 언어
+  navigation:
+    - key: home
+      label: 홈
+      url: /ko/
+    - key: background
+      label: 지나온 길
+      url: /ko/background/
+    - key: writing
+      label: 글
+      url: /ko/writing/
+    - key: interests
+      label: 관심사
+      url: /ko/interests/
+  cv: 이력서
+  skip_to_content: 본문으로 건너뛰기
+  content_label: 본문
+  table_label: 표
+  code_label: 코드 예시
+  recent_writing: 최근 글
+  all_writing: 모든 글
+  writing_eyebrow: 생각과 기록
+  all_posts: 전체 글
+  no_posts: 아직 작성된 글이 없습니다.
+  first_post: 첫 글을 쓰면 이곳에 표시됩니다.
+  subscribe: RSS로 구독하기
+  elsewhere: 다른 곳에서
+  email: 이메일
+  missing_translation: "이 글의 번역이 아직 없습니다. 선택한 언어의 글 목록으로 이동합니다."
+  credit_html: '<a href="https://jekyllrb.com/">Jekyll</a>과 <a href="https://github.com/jekyll/minima">Minima</a>로 만들었습니다.'
+  post_language:
+    label: 글의 언어별 버전
+    original: 원문
+    translation: 번역
+    llm_translation: LLM 번역
+    names:
+      en: 영어
+      ko: 한국어
+  stack:
+    category: 구분
+    tools: 기술 스택
+    legend: "초록색: 돈 받고 써 본 기술 · 기본색: 취미 프로젝트"
+    paid: 돈 받고 써 본 기술
+    hobby: 취미 프로젝트
+  map:
+    title: 지나온 곳들
+    label: 지금까지의 여정을 보여 주는 지도
+    hint: 슬라이더를 움직이거나 재생을 눌러 여정을 따라가 보세요.
+    play: 재생
+    pause: 일시정지
+    replay: 다시 재생
+    previous: 이전 장소
+    next: 다음 장소
+    slider: 여정 단계
+    playback: 여정 재생
+    overview: 전체 보기
+    timeline: 순서대로 보기
+    stops: 개의 기록
+    stop: 기록
+    now: 현재
+    started: 시작
+    country: 장소
+    show: 지도 보기
+    zoom_in: 확대
+    zoom_out: 축소
+    expand: 선택하여 펼치기
+    close: 닫기
+    loading: 지도를 불러오는 중입니다…
+    unavailable: 지도를 불러올 수 없습니다. 아래에서 전체 여정을 읽으실 수 있습니다.
+    empty: 장소를 추가하면 이곳에 표시됩니다.
+    note: 한 번에 하나의 이동을 보여줍니다. 전체 여정은 아래 목록에 있습니다.

@@ -1,0 +1,70 @@
+# Most recent first. Both language versions use the same card structure.
+- id: imperial
+  institution:
+    en: Imperial College London
+    ko: 임페리얼 칼리지 런던
+  period: "2025–2026"
+  programmes:
+    - en: MSc Mathematics and Finance
+      ko: MSc Mathematics and Finance
+  details:
+    - label: {en: Lab, ko: 연구실}
+      value: {en: Logos Research, ko: Logos Research}
+    - label: {en: Dissertation, ko: 학위논문}
+      value:
+        en: Proof-engineering as a Partially Observable Markov Decision Process and its Application to Financial Rule Reasoning
+        ko: Proof-engineering as a Partially Observable Markov Decision Process and its Application to Financial Rule Reasoning
+      confidential: true
+    - label: {en: Advisor, ko: 지도교수}
+      people:
+        - name: Cristopher Salvi
+          url: https://profiles.imperial.ac.uk/c.salvi
+  note:
+    en: "During the time of Lean 4 and AI4Math craze. You can read about some of the work I did [here](https://www.logosresearch.ai/blog/)."
+    ko: "Lean 4와 AI4Math 열풍이 한창이던 시기였습니다. 제가 했던 작업 중 일부는 [여기](https://www.logosresearch.ai/blog/)에서 읽을 수 있습니다."
+
+- id: korea
+  institution:
+    en: Korea University
+    ko: 고려대학교
+  period: "2021–2022"
+  programmes:
+    - en: PhD programme in Artificial Intelligence (dropped out after the first half of a semester)
+      ko: 인공지능 박사과정 (한 학기 절반을 마친 뒤 중퇴)
+  details:
+    - label: {en: Lab, ko: 연구실}
+      value: {en: Robot Intelligence Lab, ko: Robot Intelligence Lab}
+    - label: {en: Research, ko: 연구}
+      value:
+        en: Control of a humanoid robot via motion retargeting and reinforcement learning.
+        ko: 모션 리타기팅과 강화학습을 통한 휴머노이드 로봇 제어.
+    - label: {en: Advisor, ko: 지도교수}
+      people:
+        - name: SungJoon Choi
+          url: https://sites.google.com/view/sungjoon-choi/home
+  note:
+    en: Officially became a "dropout boy" (do you get the joke?).
+    ko: 공식적으로 "dropout boy"가 되었습니다(농담이 이해되시나요?).
+
+- id: brown
+  institution:
+    en: Brown University
+    ko: 브라운 대학교
+  period: "2011–2015"
+  programmes:
+    - en: BSc Applied Mathematics
+      ko: BSc Applied Mathematics
+    - en: BA Mathematics
+      ko: BA Mathematics
+  details:
+    - label: {en: Capstone, ko: 캡스톤}
+      value:
+        en: Data mining on web services, with NLP and statistical analysis on user-generated data (CS1951A).
+        ko: 웹 서비스 데이터 마이닝 및 사용자 생성 데이터에 대한 자연어처리(NLP)·통계 분석 (CS1951A).
+    - label: {en: Instructor, ko: 수업 담당}
+      people:
+        - name: Tim Kraska
+          url: https://people.csail.mit.edu/kraska/
+  note:
+    en: I had fun playing League of Legends for 2 years straight. Joke aside, lectures of [Shriram Krishnamurthi](https://cs.brown.edu/people/sk/) and [Richard Kenyon](https://math.yale.edu/profile/richard-kenyon) had a profound impact on my life and the way I view Computer Science and Mathematics.
+    ko: 2년 내내 리그 오브 레전드를 즐기며 재미있게 지냈습니다. 농담은 접어 두고, [Shriram Krishnamurthi](https://cs.brown.edu/people/sk/)와 [Richard Kenyon](https://math.yale.edu/profile/richard-kenyon)의 강의는 제 삶과 컴퓨터과학 및 수학을 바라보는 방식에 깊은 영향을 주었습니다.

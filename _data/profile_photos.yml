@@ -1,0 +1,21 @@
+- id: current
+  image: /assets/images/eugene-lee.jpg
+  width: 200
+  height: 200
+  en:
+    alt: Eugene Lee giving a thumbs-up in Seoul, 2025.
+    caption: I look approximately like this. Sampled on 2025, Seoul.
+  ko:
+    alt: 2025년 서울에서 엄지를 들어 보이는 Eugene Lee.
+    caption: 대략 이렇게 생겼습니다. 2025년 서울에서 샘플링한 모습입니다.
+
+- id: childhood
+  image: /assets/images/eugene-lee-childhood.jpg
+  width: 1062
+  height: 794
+  en:
+    alt: Eugene (left) and his friend with an IBM ThinkPad, with his sister standing behind him, in Hellerup, Denmark, in 2003.
+    caption: Me and my homie hacking on an IBM thinkpad through a dial-up internet back in 2003, Hellerup, Denmark. Plus my sister standing behind me. I am the guy on the left, just in case you haven't figured.
+  ko:
+    alt: 2003년 덴마크 헬레루프에서 IBM ThinkPad 앞에 앉아 있는 어린 Eugene(왼쪽)과 친구, 그리고 Eugene 뒤에 서 있는 여동생.
+    caption: 2003년 덴마크 헬레루프에서 친구랑 IBM ThinkPad로 전화 접속 인터넷에 연결해 해킹하던 시절. 뒤에 서 있는건 제 여동생입니다. 왼쪽에 있는 사람이 저입니다. 혹시 못 알아보셨을까 봐요.

@@ -1,0 +1,64 @@
+# Personal details. Restart the local server after changing this file.
+title: "Eugene Lee"
+author: "Eugene Lee"
+description: "Eugene Lee — founder building fun AI agents. Background, interests, and occasional writing."
+lang: en
+locale: en_US
+# The first-visit homepage language. The language switch remembers a visitor's choice.
+default_language: en
+languages: [en, ko]
+timezone: Etc/UTC
+
+url: "https://colemakdvorak.github.io"
+baseurl: ""
+github_username: colemakdvorak
+
+# Uncomment these when you're ready to add them.
+# email: you@example.com
+linkedin_url: https://www.linkedin.com/in/eugenelee6/
+# cv_url: /assets/cv.pdf
+
+theme: minima
+markdown: kramdown
+highlighter: rouge
+permalink: /writing/:year/:month/:day/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      lang: en
+      locale: en_US
+  - scope:
+      path: "ko"
+    values:
+      lang: ko
+      locale: ko_KR
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: "ko"
+      type: posts
+    values:
+      permalink: /ko/writing/:year/:month/:day/:title/
+
+exclude:
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - bin
+  - vendor
+  - _templates
+  - "assets/**/README.md"

@@ -1,0 +1,9 @@
+---
+layout: null
+permalink: /assets/places.json
+sitemap: false
+---
+{
+  "stops": {{ site.data.places | jsonify }},
+  "places": {{ site.data.map_places | jsonify }}
+}

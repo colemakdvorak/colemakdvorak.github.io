@@ -1,0 +1,13 @@
+{% assign chapter = include.stop %}
+{% assign chapter_language = page.lang | default: site.lang %}
+{% assign chapter_words = site.data.locales[chapter_language].map %}
+<div class="journey-card-content" data-chapter-content>
+  <h3 class="journey-card-title">{{ chapter.title[chapter_language] | default: chapter.title.en | escape }}</h3>
+  <p class="journey-card-context">{{ chapter.context[chapter_language] | default: chapter.context.en | escape }}</p>
+  <p class="journey-card-meta">
+    <span class="journey-card-country">{{ chapter.country[chapter_language] | default: chapter.country.en | escape }}</span>
+    {% if chapter.period %}<span class="journey-card-period"><span class="journey-meta-separator" aria-hidden="true">·</span> {{ chapter.period | escape }}</span>{% endif %}
+    {% if chapter.current %}<span class="journey-current">{{ chapter_words.now }}</span>{% endif %}
+  </p>
+  <p class="journey-card-note">{{ chapter.note[chapter_language] | default: chapter.note.en | escape }}</p>
+</div>

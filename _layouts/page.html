@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<article class="detail-page">
+  <header class="page-header">
+    {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow | escape }}</p>{% endif %}
+    <h1>{{ page.title | escape }}</h1>
+    {% if page.description %}<p class="page-intro">{{ page.description | escape }}</p>{% endif %}
+  </header>
+  <div class="page-body">{{ content }}</div>
+</article>

@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")/.."
+
+tools="${GITHUB_PAGE_RUBY_HOME:-$HOME/.local/share/github-page-tools}"
+if [[ -x "$tools/bin/ruby" ]]; then
+  export PATH="$tools/bin:$PATH"
+fi
+
+if ! command -v bundle >/dev/null 2>&1 || ! bundle check >/dev/null 2>&1; then
+  printf '%s\n' 'Run ./bin/setup to install the site dependencies first.' >&2
+  exit 1
+fi
+
+exec bundle exec jekyll serve \
+  --host "${HOST:-127.0.0.1}" \
+  --port "${PORT:-4000}" \
+  --livereload \
+  --drafts \
+  "$@"
