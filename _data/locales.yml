@@ -1,5 +1,6 @@
 en:
   label: English
+  switcher_label: English (Human)
   home_url: /
   writing_url: /writing/
   feed_url: /feed.xml

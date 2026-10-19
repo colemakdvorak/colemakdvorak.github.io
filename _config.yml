@@ -13,6 +13,9 @@ url: "https://colemakdvorak.github.io"
 baseurl: ""
 github_username: colemakdvorak
 
+# Visitor analytics, loaded only in production builds.
+goatcounter_url: "https://colemakdvorak.goatcounter.com/count"
+
 # Uncomment these when you're ready to add them.
 # email: you@example.com
 linkedin_url: https://www.linkedin.com/in/eugenelee6/

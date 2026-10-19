@@ -21,4 +21,7 @@
     <script src="{{ '/assets/lib/topojson/topojson-client.min.js' | relative_url }}" defer></script>
     <script src="{{ '/assets/journey-player.js' | relative_url }}" defer></script>
   {% endif %}
+  {% if jekyll.environment == 'production' and site.goatcounter_url and site.goatcounter_url != '' %}
+    <script data-goatcounter="{{ site.goatcounter_url | escape }}" async src="https://gc.zgo.at/count.js"></script>
+  {% endif %}
 </head>

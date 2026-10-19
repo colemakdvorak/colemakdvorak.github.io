@@ -1,4 +1,4 @@
-# Personal site
+# colemakdvorak.github.io
 
 A Markdown-first personal site built with [Jekyll](https://jekyllrb.com/) and
 [Minima 2.5.1](https://github.com/jekyll/minima/tree/v2.5.1). It uses the
@@ -7,7 +7,7 @@ English and Korean versions share the design, with separate Markdown content.
 
 ## Local preview
 
-From this directory:
+From the `colemakdvorak.github.io` project directory:
 
 ```sh
 ./bin/setup   # First run, or after changing the Gemfile
@@ -262,6 +262,16 @@ For a local draft, put a Markdown file in `_drafts/` (English) or
 Repository visibility still determines who can read committed draft source.
 Posts dated in the future stay hidden until that date and a subsequent build.
 
+## Visitor analytics
+
+Production pages load [GoatCounter](https://www.goatcounter.com/) using
+`goatcounter_url` in `_config.yml`. Sign in at
+**https://colemakdvorak.goatcounter.com/** to view the site's statistics.
+
+Tracking is enabled only when `JEKYLL_ENV=production`, which the GitHub Pages
+workflow already sets. Local `./bin/dev` previews do not send page views.
+Remove or empty `goatcounter_url` to disable tracking.
+
 ## Production build
 
 With Ruby/Bundler on PATH:
@@ -279,25 +289,21 @@ PATH="$HOME/.local/share/github-page-tools/bin:$PATH" \
 
 ## Publish to GitHub Pages
 
-The configuration targets **https://colemakdvorak.github.io/**.
+The configuration targets **https://colemakdvorak.github.io/** with an empty
+`baseurl`. The GitHub repository is
+[`colemakdvorak/colemakdvorak.github.io`](https://github.com/colemakdvorak/colemakdvorak.github.io),
+and this clone's `origin` remote is:
 
-1. Rename the GitHub repository from `github-page` to
-   `colemakdvorak.github.io` in **Settings → General**. The local directory can
-   keep its current name.
-2. Update this clone's remote after the rename:
+```text
+https://github.com/colemakdvorak/colemakdvorak.github.io.git
+```
 
-   ```sh
-   git remote set-url origin https://github.com/colemakdvorak/colemakdvorak.github.io.git
-   ```
-
-3. In **Settings → Pages → Build and deployment**, select **GitHub Actions**.
-4. Commit and push the site to `main` when you're ready to publish.
-5. Watch the **Deploy GitHub Pages** workflow in the Actions tab.
+1. In **Settings → Pages → Build and deployment**, select **GitHub Actions**.
+2. Commit and push the site to `main` when you're ready to publish.
+3. Watch the **Deploy GitHub Pages** workflow in the Actions tab.
 
 GitHub Free requires a public repository for Pages; GitHub Pro also supports
 publishing from a private repository.
 
 For a custom domain later, configure the domain and DNS in GitHub Pages,
-update `url` in `_config.yml`, and keep `baseurl` empty. If you instead retain
-the current repository name and use its project-site URL, set
-`baseurl: "/github-page"`.
+update `url` in `_config.yml`, and keep `baseurl` empty.

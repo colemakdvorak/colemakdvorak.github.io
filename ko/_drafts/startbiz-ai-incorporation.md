@@ -4,6 +4,7 @@ lang: ko
 original_lang: en
 translation_method: llm
 translation_key: startbiz-ai-incorporation
+date: 2026-10-19
 title: "AI 스타트업 법인을 설립하기 위해 AI를 사용해 중기부 웹사이트 해킹한 썰 풉니다.ssul"
 description: "내 스타트업의 법인을 설립하려고 한국 중소벤처기업부가 운영하는 웹 서비스 StartBiz를 리버스 엔지니어링했습니다."
 # 공개할 때 아래 미리보기 전용 설정을 제거하세요.
