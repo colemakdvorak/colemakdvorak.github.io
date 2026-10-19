@@ -6,9 +6,6 @@ translation_key: startbiz-ai-incorporation
 date: 2026-10-19
 title: "I had to hack a South Korean government website with AI to incorporate my AI startup."
 description: "I reverse-engineered StartBiz, a web service hosted by the Ministry of SMEs and Startups in South Korea, to incorporate my startup."
-# Remove these preview overrides when publishing.
-permalink: /preview/startbiz-ai-incorporation/
-sitemap: false
 ---
 
 {{ page.description }}
