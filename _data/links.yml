@@ -1,5 +1,5 @@
-# Replace this one URL with arXiv when ready; both languages reuse it.
-gpu_paper: https://openreview.net/forum?id=zn1oDXQzOp
+# Both languages reuse this paper URL.
+gpu_paper: https://arxiv.org/abs/2610.24548
 tfp_integration: https://github.com/tensorflow/probability/commit/23be9dcf370863e1800d45674c2da1fe7ae10f1e
 gesture_demo: https://www.youtube.com/watch?v=k4H7SP-tWYw
 secon_award: https://secon2012.ieee-secon.org/posters.html

@@ -132,7 +132,7 @@ pages with `places_map: true`; behavior lives in `assets/journey-player.js`.
 ## Work previews and attribution
 
 Project preview text is in `_data/work.yml`. Shared source URLs are in
-`_data/links.yml`; replacing **`gpu_paper`** with the later arXiv URL updates
+`_data/links.yml`; updating **`gpu_paper`** changes
 the paper links in both languages.
 
 The KAIST entry identifies the Android application-prototype contribution
